@@ -197,8 +197,12 @@ export const education = [
       "Programming Through C, Data Structures, Object-Oriented Programming Through C++, Software Engineering, Design and Analysis of Algorithms, Database Management Systems, Java Programming, Compiler Design, Operating Systems, Computer Networks, Data Mining, Artificial Intelligence, Linux Programming, Machine Learning, Web Technologies, Internet of Things",
     roles: [
       {
-        title: "Research Assistant — Dr. Pasupuleti Venkata Siva Kumar",
+        title: "Research Assistant — Under Prof Dr. Pasupuleti Venkata Siva Kumar",
         detail: "Design and Analysis of Algorithms research.",
+      },
+      {
+        title: "Research Assistant — Under Prof Dr. Malige Gangappa",
+        detail: "Deep Learning and Artifical Intelligence research.",
       },
     ],
   },

@@ -1,18 +1,9 @@
 import { socials } from "../data/content";
+import Section from "./layout/Section";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      aria-labelledby="contact-heading"
-      className="mx-auto max-w-5xl px-4 py-16 sm:px-8 md:py-24"
-    >
-      <h2
-        id="contact-heading"
-        className="font-heading text-2xl font-semibold text-text-primary"
-      >
-        Contact
-      </h2>
+    <Section id="contact" title="Contact">
       <p className="mt-4 max-w-xl text-text-muted">
         Interested in AI agents, or just want to say hi? Reach out through any
         of the channels below.
@@ -43,6 +34,6 @@ export default function Contact() {
           LinkedIn
         </a>
       </div>
-    </section>
+    </Section>
   );
 }

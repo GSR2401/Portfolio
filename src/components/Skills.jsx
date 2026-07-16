@@ -1,20 +1,11 @@
 import { skills } from "../data/content";
+import Section from "./layout/Section";
 
 export default function Skills() {
   const categories = [...new Set(skills.map((skill) => skill.category))];
 
   return (
-    <section
-      id="skills"
-      aria-labelledby="skills-heading"
-      className="mx-auto max-w-5xl px-4 py-16 sm:px-8 md:py-24"
-    >
-      <h2
-        id="skills-heading"
-        className="font-heading text-2xl font-semibold text-text-primary"
-      >
-        Skills
-      </h2>
+    <Section id="skills" title="Skills">
       <div className="mt-8 space-y-6">
         {categories.map((category) => (
           <div key={category}>
@@ -36,6 +27,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

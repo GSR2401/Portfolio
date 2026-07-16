@@ -2,25 +2,53 @@ export default function TimelineItem({ item, kind }) {
   const coursework = item.coursework
     ? item.coursework.split(",").map((entry) => entry.trim())
     : [];
+  const hasBullets = item.bullets && item.bullets.length > 0;
 
   return (
-    <li className="relative pl-8">
+    <li className="group relative pl-8">
       <span className="absolute left-0 top-1.5 h-3 w-3 rounded-full bg-accent-violet shadow-[0_0_8px_rgba(139,92,246,0.8)]" />
       <span className="absolute left-1.5 top-4 bottom-[-2rem] w-px bg-border-subtle last:hidden" />
 
-      <p className="font-heading text-xs uppercase tracking-wide text-accent-teal">
-        {kind} · {item.dates}
-      </p>
-      <h3 className="mt-1 font-heading text-lg font-semibold text-text-primary">
-        {item.role}
-      </h3>
-      <p className="text-sm text-text-muted">
-        {item.org}
-        {item.location && <span className="text-text-muted/70"> — {item.location}</span>}
-      </p>
+      <div
+        tabIndex={hasBullets ? 0 : undefined}
+        className={
+          hasBullets
+            ? "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue rounded"
+            : undefined
+        }
+      >
+        <p className="font-heading text-xs uppercase tracking-wide text-accent-teal">
+          {kind} · {item.dates}
+        </p>
+        <h3 className="mt-1 flex items-center gap-2 font-heading text-lg font-semibold text-text-primary">
+          {item.role}
+          {hasBullets && (
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+              className="text-text-muted transition-transform group-hover:rotate-180 group-focus-within:rotate-180"
+            >
+              <path
+                d="M6 9l6 6 6-6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+        </h3>
+        <p className="text-sm text-text-muted">
+          {item.org}
+          {item.location && <span className="text-text-muted/70"> — {item.location}</span>}
+        </p>
+      </div>
 
-      {item.bullets && (
-        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed text-text-muted">
+      {hasBullets && (
+        <ul className="mt-0 max-h-0 list-disc space-y-1 overflow-hidden pl-5 text-sm leading-relaxed text-text-muted opacity-0 transition-all duration-200 group-hover:mt-3 group-hover:max-h-60 group-hover:opacity-100 group-focus-within:mt-3 group-focus-within:max-h-60 group-focus-within:opacity-100">
           {item.bullets.map((bullet, index) => (
             <li key={index}>{bullet}</li>
           ))}

@@ -17,7 +17,7 @@ export default function ProjectRow({ project }) {
         rel="noreferrer"
         className="font-heading text-xs text-accent-blue hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue rounded"
       >
-        Code →
+        GitHub →
       </a>
     </li>
   );
