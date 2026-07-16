@@ -1,5 +1,5 @@
 import { profile } from "../data/content";
-import EngineerCartoon from "./EngineerCartoon";
+import ProfilePortrait from "./ProfilePortrait";
 
 export default function Hero() {
   return (
@@ -8,7 +8,7 @@ export default function Hero() {
       aria-label="Introduction"
       className="mx-auto flex min-h-[calc(100vh-65px)] max-w-5xl flex-col-reverse items-center justify-center gap-12 px-4 py-24 sm:px-8 md:flex-row md:justify-between md:py-32"
     >
-      <div className="flex flex-col items-start">
+      <div className="flex flex-col items-start md:max-w-md">
         <p className="mb-4 font-heading text-sm text-accent-teal">Hi, I'm</p>
         <h1 className="font-heading text-4xl font-bold text-text-primary sm:text-5xl lg:text-6xl">
           {profile.name}
@@ -35,8 +35,8 @@ export default function Hero() {
           </a>
         </div>
       </div>
-      <div className="w-56 shrink-0 sm:w-72 md:w-80">
-        <EngineerCartoon />
+      <div className="aspect-square w-64 shrink-0 sm:w-96 md:w-full md:flex-1 lg:max-w-2xl">
+        <ProfilePortrait />
       </div>
     </section>
   );
