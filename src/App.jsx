@@ -1,6 +1,7 @@
 import NodeGraphBackground from "./components/background/NodeGraphBackground";
 import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
+import ScrollProgress from "./components/layout/ScrollProgress";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -15,6 +16,7 @@ function App() {
     <>
       <NodeGraphBackground />
       <Nav />
+      <ScrollProgress />
       <main>
         <Hero />
         <About />
