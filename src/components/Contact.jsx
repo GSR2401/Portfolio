@@ -3,7 +3,7 @@ import Section from "./layout/Section";
 
 export default function Contact() {
   return (
-    <Section id="contact" title="Contact">
+    <Section id="contact" title="Contact" fullHeight={false}>
       <p className="mt-4 max-w-xl text-text-muted">
         Interested in AI agents, or just want to say hi? Reach out through any
         of the channels below.
