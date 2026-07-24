@@ -150,6 +150,18 @@ export const experience = [
     ],
   },
   {
+    id: "marvel-solutions-swe",
+    role: "Software Engineer",
+    org: "Marvel Solutions",
+    location: "Hyderabad, India",
+    dates: "Jun 2023 — Jun 2024",
+    bullets: [
+      "Built Python, Django, and FastAPI services for invoicing, payments, refunds, reconciliation, expense categorization, and financial reporting, delivering 12+ REST APIs that processed approximately 80,000 requests per day.",
+      "Optimized PostgreSQL schemas, queries, indexes, pagination, and Redis caching, reducing p95 API latency from 520 milliseconds to 275 milliseconds while maintaining transactional consistency and immutable audit history.",
+      "Integrated banking, payment, identity, and notification providers using OAuth 2.0, webhooks, idempotency keys, retries, circuit breakers, asynchronous Celery workers, and secure handling of sensitive financial data.",
+    ],
+  },
+  {
     id: "vnr-research-assistant",
     role: "Research Assistant",
     org: "VNR Vignana Jyothi Institute of Engineering and Technology (JNTUH)",
